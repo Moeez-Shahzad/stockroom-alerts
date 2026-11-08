@@ -4,10 +4,12 @@
   "private": true,
   "description": "Dependency-free, reliable back-in-stock notifications",
   "type": "module",
-  "engines": { "node": ">=22.13.0" },
+  "engines": {
+    "node": ">=22.13.0"
+  },
   "scripts": {
-    "start": "node --disable-warning=ExperimentalWarning server.js",
-    "dev": "node --watch --disable-warning=ExperimentalWarning server.js",
+    "start": "node init && node --disable-warning=ExperimentalWarning server.js",
+    "dev": "node init && node --watch --disable-warning=ExperimentalWarning server.js",
     "test": "node --disable-warning=ExperimentalWarning --test tests/*.test.js",
     "check": "node --check server.js && node --check store.js && node --check worker.js && node --check provider.js && node --check utils.js"
   },
